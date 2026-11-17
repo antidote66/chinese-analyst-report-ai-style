@@ -13,7 +13,7 @@ Run on a Windows laptop (Ryzen 7 H 255, 32 GB RAM, CPU only), Nov 2026.
 Note: `run_all.bat` expects `sina_abstracts.py` in the same folder (that is how it ran on the laptop);
 copy it from `sina_corpus/` before running.
 
-Main result (paper §9.5): Binoculars scores *rise* with year (2026 vs 2019: d = +0.55, p < 0.001),
+Main result (paper §5.4): Binoculars scores *rise* with year (2026 vs 2019: d = +0.55, p < 0.001),
 i.e. later reports look *more* human to the detector. The step is at 2024, matching the Qwen2.5
 training-data cutoff rather than the 2025 spread of DeepSeek, and it comes from strategy / macro /
 industry / bond reports while company reports stay flat. We read this as training-cutoff confounding,

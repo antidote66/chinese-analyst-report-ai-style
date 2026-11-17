@@ -1,0 +1,7 @@
+model,intervention,n,ratio_vs_paired_original,ci95_low,ci95_high,word_level_spearman
+DeepSeek(deepseek-flash),light_polish,859,1.013,1.007,1.018,-0.001
+DeepSeek(deepseek-flash),deep_rewrite,800,1.134,1.121,1.147,0.292
+DeepSeek(deepseek-flash),generation,1500,1.043,1.021,1.066,0.225
+Qwen(qwen-plus),light_polish,800,1.789,1.761,1.817,0.378
+Qwen(qwen-plus),deep_rewrite,800,2.534,2.482,2.587,0.246
+Qwen(qwen-plus),generation,800,1.640,1.600,1.679,0.209

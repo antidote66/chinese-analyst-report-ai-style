@@ -1,0 +1,10 @@
+model_pair,year,n,binoculars_score,log_perplexity,top10_hit_rate
+Qwen2.5-0.5B/Instruct,2019,250,0.995,2.242,0.836
+Qwen2.5-0.5B/Instruct,2023,250,0.988,1.993,0.869
+Qwen2.5-0.5B/Instruct,2026,250,1.003,2.033,0.865
+Qwen2.5-1.5B/Instruct,2019,,0.984,,
+Qwen2.5-1.5B/Instruct,2021,,0.988,,
+Qwen2.5-1.5B/Instruct,2023,,0.990,,
+Qwen2.5-1.5B/Instruct,2024,,1.001,,
+Qwen2.5-1.5B/Instruct,2025,,1.006,,
+Qwen2.5-1.5B/Instruct,2026,,1.011,,
