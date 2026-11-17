@@ -3,7 +3,7 @@
 **生成式 AI 时代的中文金融写作：语言变化、模型指纹与检测方法的局限**
 Linguistic Change, Model Fingerprints, and the Limits of Detection
 
-Huihui Yu (虞慧晖), independent researcher, Shanghai — yhhzju@gmail.com
+Andy Yu (虞慧晖), independent researcher, Shanghai — yhhzju@gmail.com
 
 This repository holds the paper, the code and the derived data tables for a replication of the
 excess-vocabulary method (Kobak et al. 2024) on Chinese sell-side analyst reports, 2019–2026,
