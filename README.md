@@ -15,7 +15,8 @@ detectors on this genre.
 
 ## Paper / 论文
 
-- `paper/paper_zh_v1.pdf` — Chinese full text, submission version (English title and abstract on p. 2).
+- `paper/paper_en_v1.pdf` — English full text.
+- `paper/paper_zh_v1.pdf` — Chinese full text (English title and abstract on p. 2).
 
 ## Layout / 目录
 
