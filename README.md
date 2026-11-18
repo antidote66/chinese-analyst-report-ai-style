@@ -15,8 +15,9 @@ detectors on this genre.
 
 ## Paper / 论文
 
-- `paper/paper_en_v1.pdf` — English full text.
-- `paper/paper_zh_v1.pdf` — Chinese full text (English title and abstract on p. 2).
+- `paper/paper_en_v2.pdf` — English full text (current).
+- `paper/paper_zh_v2.pdf` — Chinese full text (current; English title and abstract on p. 2).
+- `paper/*_v1.pdf` — first version (2026-11-17; the SSRN preprint). v2 corrects four sample statements found while assembling this repository: the 94,201-report window double-counts 5,262 reports from 2026 (88,939 unique); Appendix A's regression sample is 14,827 reports (the 45,643 figure was a mid-crawl count); the self-trained detector used 2,359 negatives, not 2,400; Appendix B now says which model outputs are released. No result changes.
 
 ## Layout / 目录
 
@@ -36,7 +37,7 @@ detectors on this genre.
    grid search for the second break between 2023-07 and 2025-12.
 4. Detectors: HC3 Chinese RoBERTa (`Hello-SimpleAI/chatgpt-detector-roberta-chinese`), Binoculars with
    Qwen2.5-0.5B/1.5B (+Instruct), and the self-trained `hfl/chinese-roberta-wwm-ext` classifier
-   (positives: 2,359 DeepSeek texts; negatives: 2,359 human reports from 2019; the paper says 2,400, see `TODO.md`).
+   (positives: 2,359 DeepSeek texts; negatives: 2,359 human reports from 2019).
 5. Controlled experiments: DeepSeek (`deepseek-flash`) and Qwen (`qwen-plus`), temperature 0.7, three
    interventions (light polish, deep rewrite, generation from the fact skeleton), paired to the 2019 originals.
 
@@ -48,11 +49,10 @@ As of 2026-11-18 the code, word lists, report-ID lists for all three samples (23
 detector data splits and metrics, and the controlled-experiment prompts and multiplier computation are in the
 repository. Sample counts and the main numbers (eight-year index, break-point regression, §5.5 multipliers and
 CIs, detector test metrics) were re-run from the saved files and match the paper; see `sina_corpus/README.md`
-and `experiments/README.md`. Open items (polish/rewrite model outputs, three count corrections in the paper) are
-listed in `TODO.md`. The `eastmoney_pilot/` folder is complete.
+and `experiments/README.md`. The paper's v2 PDFs carry the resulting corrections. The `eastmoney_pilot/` folder is complete.
 
 截至 2026-11-18，代码、词表、三套样本的编号清单、检测器数据划分与指标、受控对照的提示词与倍数计算已全部入库，
-样本数与主要数值已从保存的文件重跑核对、与论文一致。未决事项见 `TODO.md`。
+样本数与主要数值已从保存的文件重跑核对、与论文一致。论文 v2 已据此更正。
 
 ## Citation
 
