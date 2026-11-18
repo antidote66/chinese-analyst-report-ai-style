@@ -2,16 +2,29 @@
 
 | 文件 | 内容 |
 | --- | --- |
-| `sina_abstracts.py` | 新浪财经研报库摘要抓取，按发布日期逐日翻页，断点续传（`done_dates.txt`）。输出 `{out}/{year}.jsonl`，每行 `{rptid,title,rtype,date,org,analyst,text}` |
-| `sample_ids/laptop_window_ids_2019-2026.csv` | 笔记本 Binoculars 实验用的抓取样本：2019/2021/2023/2024/2025/2026 每年 10-01 至 11-04 同一窗口，共 11,421 篇。列：`rptid, date, year, org, rtype, text_chars` |
+| `sina_abstracts.py` | 论文语料用的抓取脚本（云端工作区 2026-11-05/06 实际运行的版本）。按发布日期从新往旧逐日翻页，取每篇研报的摘要全文；`--cap N` 每天只取列表顺序前 N 篇新研报；断点续传（`done_dates.txt`）。输出 `{out}/{year}.jsonl`，每行 `{rptid,title,rtype,date,org,researcher,symbol,text}` |
+| `crawl_monthly_panel.sh` | 月度面板抓取：每年每月 1–4 日、每天前 100 篇（`--cap 100`），11 月不抓（11 月窗口用 10-01 至 11-04 窗口的全量）。用法 `./crawl_monthly_panel.sh 2019`，2019–2026 各跑一次 |
+| `sina_abstracts_laptop.py` | 笔记本 Binoculars 实验用的另一版抓取脚本（`--max-per-day`），只对应 `laptop_window_ids_2019-2026.csv` |
+| `sample_ids/` | 各样本的研报编号清单（只有编号、日期、机构、类型、摘要字数，不含摘要原文） |
+| `sample_ids/build/` | 从原始抓取文件导出编号清单并逐项核对的脚本 |
 
-用法：
+## 编号清单与论文第 3 节的核对
 
-```
-python sina_abstracts.py --start 2019-10-01 --end 2019-11-04 --out data --sleep 0.3
-```
+| 文件 | 论文样本 | 篇数 | 与论文核对 |
+| --- | --- | --- | --- |
+| `nov1-4_window_2019-2026_ids.csv` | 八年同窗口（每年 11 月 1–4 日） | 23,563 | 各年 2,048 / 1,519 / 3,413 / 1,611 / 3,829 / 4,369 / 3,485 / 3,289 与论文表一致；用这批编号重算的风格词组与周期词组均值，8 年全部与论文 5.2 节表（及 2026-11-05 输出的 `year_curves.csv`）一致到 10⁻⁹ |
+| `oct1-nov4_window_2019-2026_ids.csv` | 扩展窗口（每年 10 月 1 日至 11 月 4 日） | 94,201 | 各年 12,338 / 8,728 / 11,187 / 10,891 / 11,379 / 11,408 / 13,361 / 14,909 与论文一致；重算的逐年词文档频率与 `experiments/wordlists/doc_freq_by_year_full.csv` 完全一致 |
+| `monthly_panel_2019-2026_ids.csv` | 月度面板（95 个窗口） | 59,070 | 编号与顺序与 `panel_analysis.py` 当时输出的 `panel_reports.csv` 逐行一致，逐篇重算的 151 词与周期词得分 0 处不符 |
+| `laptop_window_ids_2019-2026.csv` | 笔记本 Binoculars 1.5B 复测 | 11,421 | — |
 
-摘要原文版权属于发布机构，本仓库不分发，只放研报编号和日期。按编号可在
-`https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/search/rptid/{rptid}/index.phtml` 取回原文。
+两点说明：
 
-待补（在 Mac mini 上）：月度面板抓取脚本，以及八年同窗口 23,563 篇、扩展窗口 94,201 篇、月度面板 59,070 篇的编号清单。
+1. **八年同窗口是 2026-11-05 09:57 的快照。** 当时 2020–2025 年的 10–11 月抓取还在进行，之后文件继续追加。抓取文件只追加不改写，所以快照 = 每个文件里按顺序的前 k 篇；`build/nov_snapshot.py` 按论文各年篇数取前缀，并用重算的组均值逐年核对（全部一致）。
+2. **扩展窗口 94,201 篇里有 5,262 条重复。** 2026 年的研报来自两个抓取文件（`mac/2026.jsonl` 与 `data/2026.jsonl`），当时的脚本只在单个文件内去重，同一篇在两个文件里各算一次。清单按论文口径保留了全部 94,201 行，`source_file` 列标明来源；去重后为 88,939 篇，2026 年为 9,647 篇。论文中“各年 8,728–14,909 篇”的 2026 年数字因此偏高。
+
+“扩展窗口中的公司研报 45,643 篇”（附录 A.1）是抓取进行中的一次计数，无法从最终文件精确还原（最终文件按同一口径为 50,792 篇），因此没有作为论文样本单独上传。附录 A 的回归实际用的是 2023/2024/2025 年各自的公司研报（4,620 / 4,008 / 6,199 篇，见 `experiments/appendixA/`）。
+
+## 取回原文
+
+摘要原文版权属于发布机构，本仓库不分发。按编号可在
+`https://stock.finance.sina.com.cn/stock/go.php/vReport_Show/kind/search/rptid/{rptid}/index.phtml` 取回。

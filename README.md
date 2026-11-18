@@ -36,7 +36,7 @@ detectors on this genre.
    grid search for the second break between 2023-07 and 2025-12.
 4. Detectors: HC3 Chinese RoBERTa (`Hello-SimpleAI/chatgpt-detector-roberta-chinese`), Binoculars with
    Qwen2.5-0.5B/1.5B (+Instruct), and the self-trained `hfl/chinese-roberta-wwm-ext` classifier
-   (positives: 2,359 DeepSeek texts; negatives: 2,400 human reports from 2019).
+   (positives: 2,359 DeepSeek texts; negatives: 2,359 human reports from 2019; the paper says 2,400, see `TODO.md`).
 5. Controlled experiments: DeepSeek (`deepseek-flash`) and Qwen (`qwen-plus`), temperature 0.7, three
    interventions (light polish, deep rewrite, generation from the fact skeleton), paired to the 2019 originals.
 
@@ -44,8 +44,15 @@ All computation ran on one Mac mini, one laptop and one cloud container; no GPU 
 
 ## Status / 状态
 
-The `sina_corpus/` and `experiments/` folders are being populated from the machines the experiments ran on
-(see `TODO.md`). The `eastmoney_pilot/` folder is complete.
+As of 2026-11-18 the code, word lists, report-ID lists for all three samples (23,563 / 94,201 / 59,070),
+detector data splits and metrics, and the controlled-experiment prompts and multiplier computation are in the
+repository. Sample counts and the main numbers (eight-year index, break-point regression, §5.5 multipliers and
+CIs, detector test metrics) were re-run from the saved files and match the paper; see `sina_corpus/README.md`
+and `experiments/README.md`. Open items (polish/rewrite model outputs, three count corrections in the paper) are
+listed in `TODO.md`. The `eastmoney_pilot/` folder is complete.
+
+截至 2026-11-18，代码、词表、三套样本的编号清单、检测器数据划分与指标、受控对照的提示词与倍数计算已全部入库，
+样本数与主要数值已从保存的文件重跑核对、与论文一致。未决事项见 `TODO.md`。
 
 ## Citation
 

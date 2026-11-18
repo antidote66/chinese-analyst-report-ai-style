@@ -1,0 +1,68 @@
+{'train': (3547, 1782), 'val': (461, 220), 'test': (710, 357)}
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] [1mBertForSequenceClassification LOAD REPORT[0m from: hfl/chinese-roberta-wwm-ext
+Key                                        | Status     | 
+-------------------------------------------+------------+-
+cls.predictions.bias                       | UNEXPECTED | 
+cls.predictions.transform.dense.weight     | UNEXPECTED | 
+cls.seq_relationship.bias                  | UNEXPECTED | 
+cls.predictions.transform.dense.bias       | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.bias   | UNEXPECTED | 
+cls.seq_relationship.weight                | UNEXPECTED | 
+cls.predictions.decoder.weight             | UNEXPECTED | 
+cls.predictions.transform.LayerNorm.weight | UNEXPECTED | 
+classifier.bias                            | MISSING    | 
+classifier.weight                          | MISSING    | 
+Notes:
+- UNEXPECTED:	can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+- MISSING:	those params were newly initialized because missing from the checkpoint. Consider training on your downstream task.
+ep0 step0/444 loss 0.3493 7s
+ep0 step20/444 loss 0.3789 122s
+ep0 step40/444 loss 0.3402 236s
+ep0 step60/444 loss 0.2956 352s
+ep0 step80/444 loss 0.3117 467s
+ep0 step100/444 loss 0.2428 582s
+ep0 step120/444 loss 0.0991 696s
+ep0 step140/444 loss 0.1881 812s
+ep0 step160/444 loss 0.0372 926s
+ep0 step180/444 loss 0.0832 1040s
+ep0 step200/444 loss 0.1375 1154s
+ep0 step220/444 loss 0.3419 1267s
+ep0 step240/444 loss 0.3570 1381s
+ep0 step260/444 loss 0.1143 1492s
+ep0 step280/444 loss 0.2534 1605s
+ep0 step300/444 loss 0.1274 1717s
+ep0 step320/444 loss 0.1799 1829s
+ep0 step340/444 loss 0.1448 1943s
+ep0 step360/444 loss 0.1123 2055s
+ep0 step380/444 loss 0.1048 2166s
+ep0 step400/444 loss 0.0297 2280s
+ep0 step420/444 loss 0.1842 2392s
+ep0 step440/444 loss 0.2076 2505s
+val ep0 {'n': 461, 'auc': 0.9555, 'f1': 0.9005, 'mean_p_gen': 0.9966, 'rate_gen': 1.0, 'mean_p_human': 0.1815, 'rate_human': 0.0954, 'mean_p_polish': 0.7233, 'rate_polish': 0.72}
+ep1 step0/444 loss 0.1681 2669s
+ep1 step20/444 loss 0.2620 2796s
+ep1 step40/444 loss 0.2272 2908s
+ep1 step60/444 loss 0.0773 3020s
+ep1 step80/444 loss 0.0556 3131s
+ep1 step100/444 loss 0.1115 3243s
+ep1 step120/444 loss 0.2298 3354s
+ep1 step140/444 loss 0.1509 3466s
+ep1 step160/444 loss 0.1638 3579s
+ep1 step180/444 loss 0.4000 3694s
+ep1 step200/444 loss 0.1991 3805s
+ep1 step220/444 loss 0.0361 3917s
+ep1 step240/444 loss 0.3622 4028s
+ep1 step260/444 loss 0.0737 4140s
+ep1 step280/444 loss 0.4095 4252s
+ep1 step300/444 loss 0.0227 4364s
+ep1 step320/444 loss 0.0559 4477s
+ep1 step340/444 loss 0.0484 4590s
+ep1 step360/444 loss 0.1223 4701s
+ep1 step380/444 loss 0.0783 4812s
+ep1 step400/444 loss 0.0240 4926s
+ep1 step420/444 loss 0.1793 5038s
+ep1 step440/444 loss 0.0428 5152s
+val ep1 {'n': 461, 'auc': 0.9614, 'f1': 0.8924, 'mean_p_gen': 0.9979, 'rate_gen': 1.0, 'mean_p_human': 0.204, 'rate_human': 0.112, 'mean_p_polish': 0.7499, 'rate_polish': 0.72}
+TEST {'n': 710, 'auc': 0.9564, 'f1': 0.8999, 'mean_p_gen': 0.9981, 'rate_gen': 1.0, 'mean_p_human': 0.1957, 'rate_human': 0.0935, 'mean_p_polish': 0.7296, 'rate_polish': 0.7099}
+2026: mean p 0.2704 rate>0.5 0.1777

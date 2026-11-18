@@ -1,0 +1,7 @@
+cond,rho,p,coverage
+gen,0.225,0.0055,0.919
+polish,-0.001,0.9918,0.871
+rewrite,0.292,0.0003,0.935
+gen_qwen,0.209,0.0101,0.984
+polish_qwen,0.378,0.0,0.984
+rewrite_qwen,0.246,0.0023,1.0
