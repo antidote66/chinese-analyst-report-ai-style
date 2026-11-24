@@ -15,9 +15,10 @@ detectors on this genre.
 
 ## Paper / 论文
 
+- SSRN preprint (English, v2 PDF): https://ssrn.com/abstract=7723639 — posted 2026-11-23.
 - `paper/paper_en_v2.pdf` — English full text (current).
 - `paper/paper_zh_v2.pdf` — Chinese full text (current; English title and abstract on p. 2).
-- `paper/*_v1.pdf` — first version (2026-11-17; the SSRN preprint). v2 corrects four sample statements found while assembling this repository: the 94,201-report window double-counts 5,262 reports from 2026 (88,939 unique); Appendix A's regression sample is 14,827 reports (the 45,643 figure was a mid-crawl count); the self-trained detector used 2,359 negatives, not 2,400; Appendix B now says which model outputs are released. No result changes.
+- `paper/*_v1.pdf` — first version (2026-11-17). v2 corrects four sample statements found while assembling this repository: the 94,201-report window double-counts 5,262 reports from 2026 (88,939 unique); Appendix A's regression sample is 14,827 reports (the 45,643 figure was a mid-crawl count); the self-trained detector used 2,359 negatives, not 2,400; Appendix B now says which model outputs are released. No result changes.
 
 ## Layout / 目录
 
@@ -57,8 +58,9 @@ and `experiments/README.md`. The paper's v2 PDFs carry the resulting corrections
 ## Citation
 
 ```
-Yu, H. (2026). Chinese Financial Writing in the Age of Generative AI: Linguistic Change,
-Model Fingerprints, and the Limits of Detection. arXiv preprint.
+Yu, A. (2026). Chinese Financial Writing in the Age of Generative AI: Linguistic Change,
+Model Fingerprints, and the Limits of Detection. SSRN Working Paper No. 7723639.
+https://ssrn.com/abstract=7723639
 ```
 
 ## License
