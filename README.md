@@ -3,7 +3,7 @@
 **生成式 AI 时代的中文金融写作：语言变化、模型指纹与检测方法的局限**
 Linguistic Change, Model Fingerprints, and the Limits of Detection
 
-Andy Yu (虞慧晖), independent researcher, Shanghai — yhhzju@gmail.com
+Andy Yu (虞慧晖), independent researcher, Shanghai — yhhzju@gmail.com — ORCID [0009-0002-1679-3087](https://orcid.org/0009-0002-1679-3087)
 
 This repository holds the paper, the code and the derived data tables for a replication of the
 excess-vocabulary method (Kobak et al. 2024) on Chinese sell-side analyst reports, 2019–2026,
@@ -15,7 +15,7 @@ detectors on this genre.
 
 ## Paper / 论文
 
-- SSRN preprint (English, v2 PDF): https://ssrn.com/abstract=7723639 — posted 2026-11-23.
+- SSRN preprint (English, v2 PDF): https://ssrn.com/abstract=7723639 — posted 2026-11-23, DOI [10.2139/ssrn.7723639](https://doi.org/10.2139/ssrn.7723639).
 - `paper/paper_en_v2.pdf` — English full text (current).
 - `paper/paper_zh_v2.pdf` — Chinese full text (current; English title and abstract on p. 2).
 - `paper/*_v1.pdf` — first version (2026-11-17). v2 corrects four sample statements found while assembling this repository: the 94,201-report window double-counts 5,262 reports from 2026 (88,939 unique); Appendix A's regression sample is 14,827 reports (the 45,643 figure was a mid-crawl count); the self-trained detector used 2,359 negatives, not 2,400; Appendix B now says which model outputs are released. No result changes.
@@ -60,7 +60,7 @@ and `experiments/README.md`. The paper's v2 PDFs carry the resulting corrections
 ```
 Yu, A. (2026). Chinese Financial Writing in the Age of Generative AI: Linguistic Change,
 Model Fingerprints, and the Limits of Detection. SSRN Working Paper No. 7723639.
-https://ssrn.com/abstract=7723639
+https://doi.org/10.2139/ssrn.7723639
 ```
 
 ## License

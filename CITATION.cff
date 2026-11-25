@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper below."
+title: "Chinese Financial Writing in the Age of Generative AI: code and data"
+authors:
+  - family-names: Yu
+    given-names: Andy
+    affiliation: Independent Researcher, Shanghai
+    orcid: "https://orcid.org/0009-0002-1679-3087"
+repository-code: "https://github.com/antidote66/chinese-analyst-report-ai-style"
+license: MIT
+preferred-citation:
+  type: article
+  title: "Chinese Financial Writing in the Age of Generative AI: Linguistic Change, Model Fingerprints, and the Limits of Detection"
+  authors:
+    - family-names: Yu
+      given-names: Andy
+      orcid: "https://orcid.org/0009-0002-1679-3087"
+  year: 2026
+  journal: "SSRN Working Paper No. 7723639"
+  doi: "10.2139/ssrn.7723639"
+  url: "https://doi.org/10.2139/ssrn.7723639"
